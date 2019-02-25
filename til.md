@@ -22,11 +22,27 @@
 
 # React Static
 
+# Webpack
+## なんかよくわからないなりにWebpack使ったときの覚書
+### 画像をエンベッド
+url-loaderを使う。  
+limitで大きいサイズを指定しておくと制限に引っかからない。
+全体のサイズ制限もこのコードで突破可能
+```webpack.config.js
+performance: {
+    maxEntrypointSize: 10000000,
+    maxAssetSize: 10000000
+}
+```
+
 # VSCode Extension
 ## ドキュメントを開く
 ```
 workspace.openTextDocument(uri).then(doc=>window.showTextDocument(doc))
 ```
+
+## オフラインで画像をWebViewで表示
+WebPackでまとめたjsをhtmlにインライン展開して、それをTypeScriptからimportできるようにすればいい。
 
 ## 文字色、背景色
 ```
