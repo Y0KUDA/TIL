@@ -12,6 +12,10 @@
 ## マージコミットを殺さないリベース
 `-p`。`git rebase foo_branch -p`で歴史の構造が保たれたままリベースできる。
 
+## empty commit
+第一コミットは空の方がいいよね(潔癖)  
+`git commit --allow-empty -m "first commit"`
+
 # Julia
 
 # CatBoost
