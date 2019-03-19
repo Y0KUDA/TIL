@@ -1,0 +1,26 @@
+workspace:
+  base: /go
+  path: src/drone-with-go
+
+pipeline:
+  test:
+    image: golang:latest
+    commands:
+      - go vet
+      - go test -v -cover
+  build:
+    image: golang:latest
+    commands:
+      - go build
+  exec:
+    image: alpine:latest
+    commands:
+      - ./drone-with-go
+  notify:
+    image: drillster/drone-email
+    host: smtp.some-server.com
+    username: foo
+    password: bar
+    from: drone@your-domain.com
+    when:
+      status: failure
