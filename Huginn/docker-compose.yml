@@ -1,0 +1,10 @@
+version: '3'
+services:
+  huginn:
+    image: huginn/huginn
+    ports:
+      - "3333:3000"
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - SKIP_INVITATION_CODE=true
