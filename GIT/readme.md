@@ -15,3 +15,7 @@
 ## empty commit
 第一コミットは空の方がいいよね(潔癖)  
 `git commit --allow-empty -m "first commit"`
+
+## 別のブランチからファイルを持ってくる方法
+こうすると、別のブランチからファイルを持ってこれる。
+`git checkout test -- .`
